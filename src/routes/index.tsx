@@ -73,9 +73,7 @@ function Hero() {
             <Sparkles className="h-3.5 w-3.5" /> Admissions Open · 2026–27
           </div>
           <h1 className="mt-6 font-display text-5xl leading-[1.05] sm:text-7xl md:text-8xl">
-            Where curious minds
-            <br />
-            <span className="italic text-gradient-gold">become remarkable</span> people.
+            PAKISTAN KARACHI SCHOOL
           </h1>
           <p className="mt-6 max-w-xl text-lg text-cream/80">
             A modern learning experience rooted in timeless values. Explore academics, facilities, and campus life at PAKISTAN KARACHI SCHOOL.
