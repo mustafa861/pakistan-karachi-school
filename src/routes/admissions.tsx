@@ -6,9 +6,9 @@ export const Route = createFileRoute("/admissions")({
   component: AdmissionsPage,
   head: () => ({
     meta: [
-      { title: "Admissions — Aurelia International School" },
-      { name: "description", content: "Admission process, eligibility, fee structure and timeline for Aurelia International School. Apply for 2026–27." },
-      { property: "og:title", content: "Admissions — Aurelia International School" },
+      { title: "Admissions — PAKISTAN KARACHI SCHOOL PKS" },
+      { name: "description", content: "Admission process, eligibility, fee structure and timeline for PAKISTAN KARACHI SCHOOL PKS. Apply for 2026–27." },
+      { property: "og:title", content: "Admissions — PAKISTAN KARACHI SCHOOL PKS" },
       { property: "og:description", content: "Apply now for 2026–27. Simple process, transparent fees, warm welcome." },
     ],
   }),

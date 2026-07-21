@@ -3,7 +3,7 @@ import { Megaphone } from "lucide-react";
 const notices = [
   "Admissions Open for 2026–27 · Limited seats in Grades I–IX",
   "Annual Science Exhibition · March 14",
-  "Aurelia ranked among the Top 10 Schools · Education Weekly",
+  "PAKISTAN KARACHI SCHOOL ranked among the Top 10 Schools · Education Weekly",
   "Free entrance test every Saturday · Book your slot",
 ];
 
