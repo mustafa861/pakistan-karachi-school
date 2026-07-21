@@ -284,7 +284,7 @@ export function Principal() {
             <div className="absolute -inset-4 -z-10 rounded-4xl bg-gradient-to-br from-gold/30 to-transparent blur-2xl" />
             <img
               src={principalImg}
-              alt="Dr. Adrian Whitmore, Principal"
+              alt="Sir Zia Ullah Khan, Principal"
               className="rounded-4xl object-cover shadow-elegant"
               loading="lazy"
               width={900}
@@ -302,8 +302,8 @@ export function Principal() {
           </p>
           <div className="mt-10 flex items-center gap-4">
             <div>
-              <div className="font-display text-2xl italic">Adrian Whitmore</div>
-              <div className="text-sm text-cream/60">Principal · Ph.D. Educational Leadership</div>
+              <div className="font-display text-2xl italic">Sir Zia Ullah Khan</div>
+              <div className="text-sm text-cream/60">Principal</div>
             </div>
           </div>
         </div>
