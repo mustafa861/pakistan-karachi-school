@@ -49,7 +49,7 @@ export function SiteNav() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-0.5 xl:flex">
+        <nav className="hidden items-center gap-0.5 lg:flex">
           {links.map((l) =>
             "to" in l ? (
               <Link
@@ -71,7 +71,7 @@ export function SiteNav() {
           )}
         </nav>
 
-        <div className="hidden items-center gap-3 xl:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <Link
             to="/admissions"
             className="group inline-flex items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-cream transition-all hover:bg-primary"
@@ -84,14 +84,14 @@ export function SiteNav() {
         <button
           aria-label="Menu"
           onClick={() => setOpen((v) => !v)}
-          className="grid h-11 w-11 place-items-center rounded-full border border-border bg-background xl:hidden"
+          className="grid h-11 w-11 place-items-center rounded-full border border-border bg-background lg:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {open && (
-        <div className="xl:hidden">
+        <div className="lg:hidden">
           <div className="container-page pb-6">
             <div className="rounded-3xl border border-border bg-card/95 p-4 backdrop-blur-xl shadow-elegant">
               <div className="flex flex-col">

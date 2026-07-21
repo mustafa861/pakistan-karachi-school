@@ -95,15 +95,15 @@ function Hero() {
         <div className="absolute inset-0 gradient-hero opacity-40 mix-blend-overlay" />
       </div>
 
-      <div className="container-page relative flex min-h-[92vh] flex-col justify-end pt-32 pb-24 text-cream">
+      <div className="container-page relative flex min-h-[70vh] flex-col justify-end pt-24 pb-20 text-cream sm:min-h-[80vh] md:min-h-[92vh]">
         <div className="max-w-3xl animate-rise">
           <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.22em] text-gold-soft backdrop-blur-md">
             <Sparkles className="h-3.5 w-3.5" /> Admissions Open · 2026–27
           </div>
-          <h1 className="mt-6 font-display text-5xl leading-[1.05] sm:text-7xl md:text-8xl">
+          <h1 className="mt-6 font-display text-3xl leading-[1.05] sm:text-5xl md:text-7xl lg:text-8xl">
             PAKISTAN KARACHI SCHOOL
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-cream/80">
+          <p className="mt-5 max-w-xl text-base text-cream/80 sm:text-lg">
             <Typewriter text="A modern learning experience rooted in timeless values. Explore academics, facilities, and campus life at PAKISTAN KARACHI SCHOOL." speed={30} />
           </p>
 
@@ -124,7 +124,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-3 sm:grid-cols-3">
+        <div className="mt-12 grid gap-3 sm:grid-cols-3">
           {[
             ["27", "Years of excellence"],
             ["A+", "Board results streak"],
@@ -132,10 +132,10 @@ function Hero() {
           ].map(([n, l]) => (
             <div
               key={l}
-              className="glass-dark rounded-3xl p-5 text-cream"
+              className="glass-dark rounded-2xl p-4 text-cream sm:rounded-3xl sm:p-5"
             >
-              <div className="font-display text-4xl text-gradient-gold">{n}</div>
-              <div className="mt-1 text-sm text-cream/70">{l}</div>
+              <div className="font-display text-3xl text-gradient-gold sm:text-4xl">{n}</div>
+              <div className="mt-1 text-xs text-cream/70 sm:text-sm">{l}</div>
             </div>
           ))}
         </div>
@@ -243,7 +243,7 @@ export function Principal() {
         </div>
         <div className="lg:col-span-7">
           <div className="text-xs uppercase tracking-[0.22em] text-gold-soft">Principal's Message</div>
-          <h2 className="mt-4 font-display text-4xl leading-tight sm:text-6xl">
+          <h2 className="mt-4 font-display text-3xl leading-tight sm:text-5xl md:text-6xl">
             "We teach children<br /><em className="text-gradient-gold">how to think</em>, not what to think."
           </h2>
           <p className="mt-8 max-w-2xl text-cream/70">
@@ -299,11 +299,11 @@ export function Academics() {
           </div>
         </div>
         <div className="lg:col-span-8">
-          <div key={s.name} className="animate-rise rounded-4xl bg-gradient-to-br from-cream to-background p-10 border border-border shadow-elegant">
+          <div key={s.name} className="animate-rise rounded-4xl bg-gradient-to-br from-cream to-background p-6 border border-border shadow-elegant sm:p-10">
             <div className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-gold">
               <GraduationCap className="h-4 w-4" /> {s.age}
             </div>
-            <h3 className="mt-3 font-display text-5xl">{s.name}</h3>
+            <h3 className="mt-3 font-display text-3xl sm:text-5xl">{s.name}</h3>
             <p className="mt-5 max-w-2xl text-lg text-foreground/70">{s.desc}</p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -351,7 +351,7 @@ export function Classes() {
     <Section eyebrow="Classes" title="Every grade, thoughtfully designed.">
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {items.map((c) => (
-          <div key={c.g} className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 card-hover">
+          <div key={c.g} className="group relative overflow-hidden rounded-3xl border border-border bg-card p-6 card-hover sm:p-8">
             <div className="flex items-center justify-between">
               <div>
                 <div className="text-xs uppercase tracking-[0.22em] text-gold">{c.age}</div>
@@ -391,7 +391,7 @@ export function Teachers() {
         {t.map((p) => (
           <div key={p.n} className="group rounded-3xl border border-border bg-card p-6 card-hover">
             <div className={`grid aspect-square place-items-center rounded-2xl bg-gradient-to-br ${p.grad}`}>
-              <span className="font-display text-6xl text-ink/70">{p.init}</span>
+              <span className="font-display text-4xl text-ink/70 sm:text-6xl">{p.init}</span>
             </div>
             <div className="mt-5">
               <div className="font-display text-2xl">{p.n}</div>
@@ -451,7 +451,7 @@ function Counter({ to, suffix, label }: { to: number; suffix: string; label: str
   }, [to]);
   return (
     <div ref={ref}>
-      <div className="font-display text-6xl text-gradient-gold">
+      <div className="font-display text-5xl text-gradient-gold sm:text-6xl">
         {n.toLocaleString()}{suffix}
       </div>
       <div className="mt-2 text-sm uppercase tracking-[0.2em] text-cream/60">{label}</div>
@@ -533,7 +533,7 @@ export function Gallery() {
   const [open, setOpen] = useState<number | null>(null);
   return (
     <Section id="gallery" eyebrow="Gallery" title="Moments from campus life.">
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {items.map((it, i) => (
           <button
             key={i}
@@ -618,7 +618,7 @@ export function Achievements() {
     <Section eyebrow="Achievements" title="Excellence, quietly earned.">
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {items.map(({ i: Icon, k, v }) => (
-          <div key={k} className="rounded-3xl border border-border bg-gradient-to-br from-cream to-background p-8 card-hover">
+          <div key={k} className="rounded-3xl border border-border bg-gradient-to-br from-cream to-background p-6 card-hover sm:p-8">
             <div className="grid h-12 w-12 place-items-center rounded-2xl bg-ink text-gold-soft">
               <Icon className="h-5 w-5" />
             </div>
@@ -642,7 +642,7 @@ export function Testimonials() {
     <Section eyebrow="Testimonials" title="Words from our families.">
       <div className="grid gap-6 md:grid-cols-3">
         {t.map((it) => (
-          <div key={it.n} className="rounded-3xl border border-border bg-card p-8 card-hover">
+          <div key={it.n} className="rounded-3xl border border-border bg-card p-6 card-hover sm:p-8">
             <Quote className="h-6 w-6 text-gold" />
             <p className="mt-4 font-display text-2xl leading-snug">"{it.q}"</p>
             <div className="mt-6 border-t border-border pt-4">
@@ -670,7 +670,7 @@ export function News() {
           <a
             href="#"
             key={p.t}
-            className="group flex flex-col rounded-3xl border border-border bg-card p-7 card-hover"
+            className="group flex flex-col rounded-3xl border border-border bg-card p-6 card-hover sm:p-7"
           >
             <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-gold">
               <Newspaper className="h-3.5 w-3.5" /> {p.c}
@@ -755,7 +755,7 @@ export function Section({ id, eyebrow, title, children }: { id?: string; eyebrow
       <div className="container-page">
         <div className="mb-14 max-w-3xl">
           <div className="text-xs uppercase tracking-[0.28em] text-gold">{eyebrow}</div>
-          <h2 className="mt-4 font-display text-4xl leading-[1.05] sm:text-6xl">{title}</h2>
+          <h2 className="mt-4 font-display text-3xl leading-[1.05] sm:text-5xl md:text-6xl">{title}</h2>
         </div>
         {children}
       </div>

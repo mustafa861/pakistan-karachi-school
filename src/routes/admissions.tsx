@@ -33,7 +33,7 @@ function Header() {
         <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.22em] text-gold-soft">
           <Sparkles className="h-3.5 w-3.5" /> Admissions 2026–27
         </div>
-        <h1 className="mt-6 max-w-3xl font-display text-5xl leading-[1.05] sm:text-7xl">
+        <h1 className="mt-6 max-w-3xl font-display text-4xl leading-[1.05] sm:text-7xl">
           Begin your child's journey at <em className="text-gradient-gold">PKS</em>.
         </h1>
         <p className="mt-6 max-w-xl text-lg text-cream/70">
@@ -64,7 +64,7 @@ function Process() {
     <section id="process" className="container-page py-24">
       <div className="mb-14 max-w-2xl">
         <div className="text-xs uppercase tracking-[0.28em] text-gold">Process</div>
-        <h2 className="mt-4 font-display text-5xl">Five thoughtful steps.</h2>
+        <h2 className="mt-4 font-display text-3xl sm:text-5xl">Five thoughtful steps.</h2>
       </div>
       <div className="grid gap-4 md:grid-cols-5">
         {steps.map((s) => (
@@ -120,7 +120,7 @@ function FeesAndTimeline() {
       <div className="container-page grid gap-10 lg:grid-cols-2">
         <div>
           <div className="text-xs uppercase tracking-[0.28em] text-gold">Fee Structure</div>
-          <h2 className="mt-4 font-display text-5xl">Transparent, all-inclusive.</h2>
+          <h2 className="mt-4 font-display text-3xl sm:text-5xl">Transparent, all-inclusive.</h2>
           <div className="mt-8 divide-y divide-border rounded-3xl border border-border bg-card">
             {fees.map(([k, v]) => (
               <div key={k} className="flex items-center justify-between px-6 py-4">
@@ -133,7 +133,7 @@ function FeesAndTimeline() {
         </div>
         <div>
           <div className="text-xs uppercase tracking-[0.28em] text-gold">Timeline</div>
-          <h2 className="mt-4 font-display text-5xl">Key dates.</h2>
+          <h2 className="mt-4 font-display text-3xl sm:text-5xl">Key dates.</h2>
           <ol className="mt-8 space-y-4">
             {timeline.map(([d, l], i) => (
               <li key={d} className="flex gap-4 rounded-3xl border border-border bg-card p-5">
@@ -163,7 +163,7 @@ function Downloads() {
       <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
         <div>
           <div className="text-xs uppercase tracking-[0.28em] text-gold">Downloads</div>
-          <h2 className="mt-4 font-display text-5xl">Everything, in one place.</h2>
+          <h2 className="mt-4 font-display text-3xl sm:text-5xl">Everything, in one place.</h2>
         </div>
       </div>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -191,7 +191,7 @@ function ApplyForm() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <div className="text-xs uppercase tracking-[0.22em] text-gold-soft">Apply now</div>
-            <h2 className="mt-4 font-display text-5xl leading-tight">Start your application.</h2>
+            <h2 className="mt-4 font-display text-3xl leading-tight sm:text-5xl">Start your application.</h2>
             <p className="mt-4 max-w-md text-cream/70">Share a few details and our admissions team will reach out within 24 hours.</p>
             <div className="mt-8 flex items-center gap-3 text-sm text-cream/70">
               <GraduationCap className="h-4 w-4 text-gold" /> Priority replies for Round-1 applicants.

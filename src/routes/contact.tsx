@@ -18,10 +18,10 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
   return (
     <div>
-      <section className="gradient-hero py-24 text-cream">
+      <section className="relative overflow-hidden gradient-hero py-24 text-cream">
         <div className="container-page">
           <div className="text-xs uppercase tracking-[0.28em] text-gold-soft">Contact</div>
-          <h1 className="mt-4 max-w-3xl font-display text-6xl leading-[1.05] sm:text-7xl">We'd love to hear <em className="text-gradient-gold">from you</em>.</h1>
+          <h1 className="mt-4 max-w-3xl font-display text-5xl leading-[1.05] sm:text-7xl">We'd love to hear <em className="text-gradient-gold">from you</em>.</h1>
           <p className="mt-6 max-w-xl text-cream/70">
             Questions, admissions, campus visits or media enquiries — write to us and we'll respond within one business day.
           </p>
