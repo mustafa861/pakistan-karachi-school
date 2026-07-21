@@ -34,7 +34,7 @@ function Header() {
           <Sparkles className="h-3.5 w-3.5" /> Admissions 2026–27
         </div>
         <h1 className="mt-6 max-w-3xl font-display text-5xl leading-[1.05] sm:text-7xl">
-          Begin your child's journey at <em className="text-gradient-gold">Aurelia</em>.
+          Begin your child's journey at <em className="text-gradient-gold">PKS</em>.
         </h1>
         <p className="mt-6 max-w-xl text-lg text-cream/70">
           A simple, transparent process — from your first enquiry to a warm welcome on Day One.

@@ -12,9 +12,9 @@ export function SiteFooter() {
                 <GraduationCap className="h-5 w-5" />
               </span>
               <div className="leading-tight">
-                <div className="font-display text-2xl text-cream">PAKISTAN KARACHI SCHOOL</div>
+                <div className="font-display text-2xl text-cream">PKS</div>
                 <div className="text-[10px] uppercase tracking-[0.22em] text-cream/50">
-                  International School
+                  Karachi, Pakistan
                 </div>
               </div>
             </div>
