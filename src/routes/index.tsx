@@ -140,7 +140,7 @@ function TrustStrip() {
 }
 
 /* ============================ ABOUT ============================ */
-function About() {
+export function About() {
   return (
     <Section id="about" eyebrow="About PAKISTAN KARACHI SCHOOL" title="A school shaped by care, craft and curiosity.">
       <div className="grid gap-16 lg:grid-cols-12">
@@ -197,7 +197,7 @@ function About() {
 }
 
 /* ============================ PRINCIPAL ============================ */
-function Principal() {
+export function Principal() {
   return (
     <section className="relative overflow-hidden bg-ink py-28 text-cream">
       <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-gold/20 blur-3xl" />
@@ -246,7 +246,7 @@ const stages = [
   { name: "Higher Secondary", age: "16–18 yrs", desc: "University-track pathways with mentoring, research and internships.", subjects: ["Advanced Placements", "Research", "College Prep"] },
 ];
 
-function Academics() {
+export function Academics() {
   const [active, setActive] = useState(0);
   const s = stages[active];
   return (
@@ -312,7 +312,7 @@ function InfoTile({ label, value }: { label: string; value: string }) {
 }
 
 /* ============================ CLASSES ============================ */
-function Classes() {
+export function Classes() {
   const items = [
     { g: "Grade I", age: "6+", curr: "National Foundations", subs: ["English", "Math", "EVS"], acts: ["Storytelling", "Art"] },
     { g: "Grade V", age: "10+", curr: "Integrated Inquiry", subs: ["Math", "Science", "Social"], acts: ["Robotics Jr.", "Choir"] },
@@ -352,7 +352,7 @@ function Classes() {
 }
 
 /* ============================ TEACHERS ============================ */
-function Teachers() {
+export function Teachers() {
   const t = [
     { n: "Elena Ferrari", role: "Head of Mathematics", exp: "18 yrs", qual: "M.Sc, Cambridge", init: "EF", grad: "from-amber-200 to-rose-200" },
     { n: "Rohan Mehra", role: "Physics Lead", exp: "14 yrs", qual: "Ph.D IIT Bombay", init: "RM", grad: "from-sky-200 to-indigo-200" },
@@ -383,7 +383,7 @@ function Teachers() {
 }
 
 /* ============================ STATS (animated counters) ============================ */
-function Stats() {
+export function Stats() {
   const items = [
     { n: 8400, s: "+", l: "Alumni worldwide" },
     { n: 98, s: "%", l: "Board pass rate" },
@@ -434,7 +434,7 @@ function Counter({ to, suffix, label }: { to: number; suffix: string; label: str
 }
 
 /* ============================ FACILITIES ============================ */
-function Facilities() {
+export function Facilities() {
   const list = [
     { i: Cpu, t: "Smart Classrooms" },
     { i: FlaskConical, t: "Science Labs" },
@@ -495,7 +495,7 @@ function FacilityImg({ src, title }: { src: string; title: string }) {
 }
 
 /* ============================ GALLERY (lightbox) ============================ */
-function Gallery() {
+export function Gallery() {
   const items = [
     { src: galSports, cap: "Sports Day 2025" },
     { src: galArt, cap: "Little Artists" },
@@ -544,7 +544,7 @@ function Gallery() {
 }
 
 /* ============================ EVENTS ============================ */
-function Events() {
+export function Events() {
   const evs = [
     { d: "14", m: "Mar", t: "Annual Science Exhibition", loc: "Grand Auditorium" },
     { d: "22", m: "Apr", t: "Sports Day 2026", loc: "Main Grounds" },
@@ -581,7 +581,7 @@ function Events() {
 }
 
 /* ============================ ACHIEVEMENTS ============================ */
-function Achievements() {
+export function Achievements() {
   const items = [
     { i: Trophy, k: "Board Toppers", v: "12 students ≥ 95% (2025)" },
     { i: Award, k: "Olympiads", v: "42 medals across STEM & languages" },
@@ -606,7 +606,7 @@ function Achievements() {
 }
 
 /* ============================ TESTIMONIALS ============================ */
-function Testimonials() {
+export function Testimonials() {
   const t = [
     { q: "PAKISTAN KARACHI SCHOOL treats each child as a whole person. Our daughter blossomed here.", n: "Priya S.", r: "Parent · Grade VI" },
     { q: "Teachers who care, and a campus that inspires. It changed how I learn.", n: "Aarav M.", r: "Student · Grade XI" },
@@ -631,7 +631,7 @@ function Testimonials() {
 }
 
 /* ============================ NEWS ============================ */
-function News() {
+export function News() {
   const posts = [
     { c: "Notice", t: "Winter break from Dec 22 to Jan 3", d: "2 days ago" },
     { c: "Admissions", t: "Round-2 applications closing Feb 10", d: "1 week ago" },
@@ -659,7 +659,7 @@ function News() {
 }
 
 /* ============================ FAQs ============================ */
-function FAQs() {
+export function FAQs() {
   const qs = [
     ["What is the admission process?", "Enquiry → entrance interaction → parent meeting → offer of seat. The full timeline is on the Admissions page."],
     ["Do you offer transport?", "Yes. We operate GPS-enabled buses across major residential zones with trained attendants."],
@@ -690,7 +690,7 @@ function FAQs() {
 }
 
 /* ============================ CTA BANNER ============================ */
-function CtaBanner() {
+export function CtaBanner() {
   return (
     <section className="py-20">
       <div className="container-page">
@@ -723,7 +723,7 @@ function CtaBanner() {
 }
 
 /* ============================ SHARED ============================ */
-function Section({ id, eyebrow, title, children }: { id?: string; eyebrow: string; title: string; children: React.ReactNode }) {
+export function Section({ id, eyebrow, title, children }: { id?: string; eyebrow: string; title: string; children: React.ReactNode }) {
   return (
     <section id={id} className="py-24 sm:py-28">
       <div className="container-page">
