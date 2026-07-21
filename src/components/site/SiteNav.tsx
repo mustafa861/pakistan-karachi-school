@@ -4,11 +4,17 @@ import { Menu, X, GraduationCap, ArrowUpRight } from "lucide-react";
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
-  { label: "Academics", href: "/#academics" },
-  { label: "Facilities", href: "/#facilities" },
-  { label: "Gallery", href: "/#gallery" },
-  { label: "Events", href: "/#events" },
+  { label: "About", to: "/about" as const },
+  { label: "Principal", to: "/principal-message" as const },
+  { label: "Academics", to: "/academics" as const },
+  { label: "Classes", to: "/classes" as const },
+  { label: "Teachers", to: "/teachers" as const },
+  { label: "Facilities", to: "/facilities" as const },
+  { label: "Gallery", to: "/gallery" as const },
+  { label: "Events", to: "/events" as const },
+  { label: "Achievements", to: "/achievements" as const },
+  { label: "News", to: "/news" as const },
+  { label: "FAQs", to: "/faqs" as const },
   { label: "Admissions", to: "/admissions" as const },
   { label: "Contact", to: "/contact" as const },
 ];
@@ -43,13 +49,13 @@ export function SiteNav() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0.5 xl:flex">
           {links.map((l) =>
             "to" in l ? (
               <Link
                 key={l.label}
                 to={l.to}
-                className="rounded-full px-4 py-2 text-sm text-foreground/70 transition-colors hover:bg-secondary hover:text-foreground"
+                className="rounded-full px-3 py-2 text-sm text-foreground/70 transition-colors hover:bg-secondary hover:text-foreground"
               >
                 {l.label}
               </Link>
@@ -57,7 +63,7 @@ export function SiteNav() {
               <a
                 key={l.label}
                 href={l.href}
-                className="rounded-full px-4 py-2 text-sm text-foreground/70 transition-colors hover:bg-secondary hover:text-foreground"
+                className="rounded-full px-3 py-2 text-sm text-foreground/70 transition-colors hover:bg-secondary hover:text-foreground"
               >
                 {l.label}
               </a>
@@ -65,7 +71,7 @@ export function SiteNav() {
           )}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <Link
             to="/admissions"
             className="group inline-flex items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-cream transition-all hover:bg-primary"
@@ -78,14 +84,14 @@ export function SiteNav() {
         <button
           aria-label="Menu"
           onClick={() => setOpen((v) => !v)}
-          className="grid h-11 w-11 place-items-center rounded-full border border-border bg-background lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-full border border-border bg-background xl:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {open && (
-        <div className="lg:hidden">
+        <div className="xl:hidden">
           <div className="container-page pb-6">
             <div className="rounded-3xl border border-border bg-card/95 p-4 backdrop-blur-xl shadow-elegant">
               <div className="flex flex-col">
