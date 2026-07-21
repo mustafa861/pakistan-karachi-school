@@ -36,9 +36,9 @@ export function SiteNav() {
             <GraduationCap className="h-5 w-5" />
           </span>
           <span className="flex min-w-0 flex-col leading-tight">
-            <span className="font-display text-xl text-ink">Aurelia</span>
+            <span className="font-display text-xl text-ink">PKS</span>
             <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-              International School
+              Karachi, Pakistan
             </span>
           </span>
         </Link>

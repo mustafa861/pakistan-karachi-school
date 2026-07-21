@@ -21,8 +21,8 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Aurelia International School — A premium learning experience" },
-      { name: "description", content: "Aurelia International School: modern academics, world-class facilities, and inspiring campus life from Play Group through Higher Secondary." },
+      { title: "PAKISTAN KARACHI SCHOOL PKS — A premium learning experience" },
+      { name: "description", content: "PAKISTAN KARACHI SCHOOL PKS: modern academics, world-class facilities, and inspiring campus life from Play Group through Higher Secondary." },
       { property: "og:image", content: "/social-cover.jpg" },
     ],
   }),
@@ -58,7 +58,7 @@ function Hero() {
       <div className="absolute inset-0 -z-10">
         <img
           src={heroImg}
-          alt="Aurelia International School campus at golden hour"
+          alt="PAKISTAN KARACHI SCHOOL PKS campus at golden hour"
           className="h-full w-full object-cover"
           width={1920}
           height={1200}
@@ -78,7 +78,7 @@ function Hero() {
             <span className="italic text-gradient-gold">become remarkable</span> people.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-cream/80">
-            A modern learning experience rooted in timeless values. Explore academics, facilities, and campus life at Aurelia.
+            A modern learning experience rooted in timeless values. Explore academics, facilities, and campus life at PAKISTAN KARACHI SCHOOL.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -142,11 +142,11 @@ function TrustStrip() {
 /* ============================ ABOUT ============================ */
 function About() {
   return (
-    <Section id="about" eyebrow="About Aurelia" title="A school shaped by care, craft and curiosity.">
+    <Section id="about" eyebrow="About PAKISTAN KARACHI SCHOOL" title="A school shaped by care, craft and curiosity.">
       <div className="grid gap-16 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <p className="text-xl leading-relaxed text-foreground/80">
-            Founded in 1998, Aurelia has grown into one of the region's most respected schools — a place where academic rigour, creative expression and character formation move together as one.
+            Founded in 1998, PAKISTAN KARACHI SCHOOL has grown into one of the region's most respected schools — a place where academic rigour, creative expression and character formation move together as one.
           </p>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
             Our campus was designed as a living classroom: sunlit studios, quiet libraries, purposeful laboratories and open lawns where friendships and ideas both take root.
@@ -170,7 +170,7 @@ function About() {
           <div className="rounded-4xl overflow-hidden shadow-elegant">
             <img
               src={facLib}
-              alt="Reading room at Aurelia"
+              alt="Reading room at PAKISTAN KARACHI SCHOOL"
               className="h-full w-full object-cover"
               loading="lazy"
               width={1200}
@@ -221,7 +221,7 @@ function Principal() {
             "We teach children<br /><em className="text-gradient-gold">how to think</em>, not what to think."
           </h2>
           <p className="mt-8 max-w-2xl text-cream/70">
-            At Aurelia, every child is treated as a whole person — intellect, imagination, and integrity together. Our teachers are craftspeople of learning; our classrooms are studios of ideas. Welcome to a school that will grow with your child, and for your child.
+            At PAKISTAN KARACHI SCHOOL, every child is treated as a whole person — intellect, imagination, and integrity together. Our teachers are craftspeople of learning; our classrooms are studios of ideas. Welcome to a school that will grow with your child, and for your child.
           </p>
           <div className="mt-10 flex items-center gap-4">
             <div>
@@ -472,7 +472,7 @@ function Facilities() {
           <div className="grid gap-4">
             <FacilityImg src={facLab} title="State-of-the-art Science Labs" />
             <div className="grid grid-cols-2 gap-4">
-              <FacilityImg src={facLib} title="The Aurelia Library" />
+              <FacilityImg src={facLib} title="The PAKISTAN KARACHI SCHOOL Library" />
               <FacilityImg src={facAud} title="Grand Auditorium" />
             </div>
           </div>
@@ -608,7 +608,7 @@ function Achievements() {
 /* ============================ TESTIMONIALS ============================ */
 function Testimonials() {
   const t = [
-    { q: "Aurelia treats each child as a whole person. Our daughter blossomed here.", n: "Priya S.", r: "Parent · Grade VI" },
+    { q: "PAKISTAN KARACHI SCHOOL treats each child as a whole person. Our daughter blossomed here.", n: "Priya S.", r: "Parent · Grade VI" },
     { q: "Teachers who care, and a campus that inspires. It changed how I learn.", n: "Aarav M.", r: "Student · Grade XI" },
     { q: "The most thoughtful school we visited. The values are lived, not printed.", n: "Marcus & Lila W.", r: "Parents · KG" },
   ];
@@ -701,7 +701,7 @@ function CtaBanner() {
             <div>
               <div className="text-xs uppercase tracking-[0.22em] text-gold-soft">Ready to visit?</div>
               <h3 className="mt-4 font-display text-5xl leading-tight md:text-6xl">
-                Come and feel what<br /><em className="text-gradient-gold">Aurelia</em> is like.
+                Come and feel what<br /><em className="text-gradient-gold">PAKISTAN KARACHI SCHOOL</em> is like.
               </h3>
               <p className="mt-6 max-w-lg text-cream/70">
                 Book a personal campus tour, meet our faculty, and see the classrooms in action.

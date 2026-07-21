@@ -12,9 +12,9 @@ export function SiteFooter() {
                 <GraduationCap className="h-5 w-5" />
               </span>
               <div className="leading-tight">
-                <div className="font-display text-2xl text-cream">Aurelia</div>
+                <div className="font-display text-2xl text-cream">PKS</div>
                 <div className="text-[10px] uppercase tracking-[0.22em] text-cream/50">
-                  International School
+                  Karachi, Pakistan
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-cream/50 sm:flex-row">
-          <span>© {new Date().getFullYear()} Aurelia International School. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} PAKISTAN KARACHI SCHOOL PKS. All rights reserved.</span>
           <div className="flex gap-6">
             <Link to="/" className="hover:text-cream">Privacy</Link>
             <Link to="/" className="hover:text-cream">Terms</Link>

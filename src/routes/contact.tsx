@@ -6,9 +6,9 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact — Aurelia International School" },
-      { name: "description", content: "Get in touch with Aurelia International School. Address, phone, email, office hours and directions." },
-      { property: "og:title", content: "Contact — Aurelia International School" },
+      { title: "Contact — PAKISTAN KARACHI SCHOOL PKS" },
+      { name: "description", content: "Get in touch with PAKISTAN KARACHI SCHOOL PKS. Address, phone, email, office hours and directions." },
+      { property: "og:title", content: "Contact — PAKISTAN KARACHI SCHOOL PKS" },
       { property: "og:description", content: "We'd love to hear from you." },
     ],
   }),

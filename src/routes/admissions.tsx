@@ -6,9 +6,9 @@ export const Route = createFileRoute("/admissions")({
   component: AdmissionsPage,
   head: () => ({
     meta: [
-      { title: "Admissions — Aurelia International School" },
-      { name: "description", content: "Admission process, eligibility, fee structure and timeline for Aurelia International School. Apply for 2026–27." },
-      { property: "og:title", content: "Admissions — Aurelia International School" },
+      { title: "Admissions — PAKISTAN KARACHI SCHOOL PKS" },
+      { name: "description", content: "Admission process, eligibility, fee structure and timeline for PAKISTAN KARACHI SCHOOL PKS. Apply for 2026–27." },
+      { property: "og:title", content: "Admissions — PAKISTAN KARACHI SCHOOL PKS" },
       { property: "og:description", content: "Apply now for 2026–27. Simple process, transparent fees, warm welcome." },
     ],
   }),
@@ -34,7 +34,7 @@ function Header() {
           <Sparkles className="h-3.5 w-3.5" /> Admissions 2026–27
         </div>
         <h1 className="mt-6 max-w-3xl font-display text-5xl leading-[1.05] sm:text-7xl">
-          Begin your child's journey at <em className="text-gradient-gold">Aurelia</em>.
+          Begin your child's journey at <em className="text-gradient-gold">PKS</em>.
         </h1>
         <p className="mt-6 max-w-xl text-lg text-cream/70">
           A simple, transparent process — from your first enquiry to a warm welcome on Day One.
