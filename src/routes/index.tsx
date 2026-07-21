@@ -51,6 +51,34 @@ function Home() {
   );
 }
 
+/* ============================== TYPEWRITER ============================== */
+function Typewriter({ text, speed = 40 }: { text: string; speed?: number }) {
+  const [displayed, setDisplayed] = useState("");
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    setDisplayed("");
+    setDone(false);
+    let i = 0;
+    const timer = setInterval(() => {
+      i++;
+      setDisplayed(text.slice(0, i));
+      if (i >= text.length) {
+        clearInterval(timer);
+        setDone(true);
+      }
+    }, speed);
+    return () => clearInterval(timer);
+  }, [text, speed]);
+
+  return (
+    <>
+      {displayed}
+      <span className={`inline-block w-[2px] h-[1em] bg-gold align-middle ml-0.5 transition-opacity ${done ? "opacity-0" : "opacity-100 animate-pulse"}`} />
+    </>
+  );
+}
+
 /* ============================ HERO ============================ */
 function Hero() {
   return (
@@ -76,7 +104,7 @@ function Hero() {
             PAKISTAN KARACHI SCHOOL
           </h1>
           <p className="mt-6 max-w-xl text-lg text-cream/80">
-            A modern learning experience rooted in timeless values. Explore academics, facilities, and campus life at PAKISTAN KARACHI SCHOOL.
+            <Typewriter text="A modern learning experience rooted in timeless values. Explore academics, facilities, and campus life at PAKISTAN KARACHI SCHOOL." speed={30} />
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
