@@ -95,7 +95,227 @@ const IndexRoute = IndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 
-const rootRouteChildren = {
+export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/academics': typeof AcademicsRoute
+  '/achievements': typeof AchievementsRoute
+  '/admissions': typeof AdmissionsRoute
+  '/classes': typeof ClassesRoute
+  '/contact': typeof ContactRoute
+  '/events': typeof EventsRoute
+  '/facilities': typeof FacilitiesRoute
+  '/faqs': typeof FaqsRoute
+  '/gallery': typeof GalleryRoute
+  '/news': typeof NewsRoute
+  '/principal-message': typeof PrincipalMessageRoute
+  '/teachers': typeof TeachersRoute
+}
+export interface FileRoutesByTo {
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/academics': typeof AcademicsRoute
+  '/achievements': typeof AchievementsRoute
+  '/admissions': typeof AdmissionsRoute
+  '/classes': typeof ClassesRoute
+  '/contact': typeof ContactRoute
+  '/events': typeof EventsRoute
+  '/facilities': typeof FacilitiesRoute
+  '/faqs': typeof FaqsRoute
+  '/gallery': typeof GalleryRoute
+  '/news': typeof NewsRoute
+  '/principal-message': typeof PrincipalMessageRoute
+  '/teachers': typeof TeachersRoute
+}
+export interface FileRoutesById {
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/academics': typeof AcademicsRoute
+  '/achievements': typeof AchievementsRoute
+  '/admissions': typeof AdmissionsRoute
+  '/classes': typeof ClassesRoute
+  '/contact': typeof ContactRoute
+  '/events': typeof EventsRoute
+  '/facilities': typeof FacilitiesRoute
+  '/faqs': typeof FaqsRoute
+  '/gallery': typeof GalleryRoute
+  '/news': typeof NewsRoute
+  '/principal-message': typeof PrincipalMessageRoute
+  '/teachers': typeof TeachersRoute
+}
+export interface FileRouteTypes {
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/academics'
+    | '/achievements'
+    | '/admissions'
+    | '/classes'
+    | '/contact'
+    | '/events'
+    | '/facilities'
+    | '/faqs'
+    | '/gallery'
+    | '/news'
+    | '/principal-message'
+    | '/teachers'
+  fileRoutesByTo: FileRoutesByTo
+  to:
+    | '/'
+    | '/about'
+    | '/academics'
+    | '/achievements'
+    | '/admissions'
+    | '/classes'
+    | '/contact'
+    | '/events'
+    | '/facilities'
+    | '/faqs'
+    | '/gallery'
+    | '/news'
+    | '/principal-message'
+    | '/teachers'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/academics'
+    | '/achievements'
+    | '/admissions'
+    | '/classes'
+    | '/contact'
+    | '/events'
+    | '/facilities'
+    | '/faqs'
+    | '/gallery'
+    | '/news'
+    | '/principal-message'
+    | '/teachers'
+  fileRoutesById: FileRoutesById
+}
+export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AcademicsRoute: typeof AcademicsRoute
+  AchievementsRoute: typeof AchievementsRoute
+  AdmissionsRoute: typeof AdmissionsRoute
+  ClassesRoute: typeof ClassesRoute
+  ContactRoute: typeof ContactRoute
+  EventsRoute: typeof EventsRoute
+  FacilitiesRoute: typeof FacilitiesRoute
+  FaqsRoute: typeof FaqsRoute
+  GalleryRoute: typeof GalleryRoute
+  NewsRoute: typeof NewsRoute
+  PrincipalMessageRoute: typeof PrincipalMessageRoute
+  TeachersRoute: typeof TeachersRoute
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academics': {
+      id: '/academics'
+      path: '/academics'
+      fullPath: '/academics'
+      preLoaderRoute: typeof AcademicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/achievements': {
+      id: '/achievements'
+      path: '/achievements'
+      fullPath: '/achievements'
+      preLoaderRoute: typeof AchievementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admissions': {
+      id: '/admissions'
+      path: '/admissions'
+      fullPath: '/admissions'
+      preLoaderRoute: typeof AdmissionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/classes': {
+      id: '/classes'
+      path: '/classes'
+      fullPath: '/classes'
+      preLoaderRoute: typeof ClassesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/facilities': {
+      id: '/facilities'
+      path: '/facilities'
+      fullPath: '/facilities'
+      preLoaderRoute: typeof FacilitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news': {
+      id: '/news'
+      path: '/news'
+      fullPath: '/news'
+      preLoaderRoute: typeof NewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/principal-message': {
+      id: '/principal-message'
+      path: '/principal-message'
+      fullPath: '/principal-message'
+      preLoaderRoute: typeof PrincipalMessageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teachers': {
+      id: '/teachers'
+      path: '/teachers'
+      fullPath: '/teachers'
+      preLoaderRoute: typeof TeachersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
+}
+
+const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AcademicsRoute: AcademicsRoute,
@@ -111,6 +331,6 @@ const rootRouteChildren = {
   PrincipalMessageRoute: PrincipalMessageRoute,
   TeachersRoute: TeachersRoute,
 }
-
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
+  ._addFileTypes<FileRouteTypes>()
