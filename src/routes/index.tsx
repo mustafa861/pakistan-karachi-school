@@ -354,10 +354,10 @@ export function Classes() {
 /* ============================ TEACHERS ============================ */
 export function Teachers() {
   const t = [
-    { n: "Elena Ferrari", role: "Head of Mathematics", exp: "18 yrs", qual: "M.Sc, Cambridge", init: "EF", grad: "from-amber-200 to-rose-200" },
-    { n: "Rohan Mehra", role: "Physics Lead", exp: "14 yrs", qual: "Ph.D IIT Bombay", init: "RM", grad: "from-sky-200 to-indigo-200" },
-    { n: "Aisha Kabir", role: "Head of Humanities", exp: "16 yrs", qual: "M.A Oxford", init: "AK", grad: "from-emerald-200 to-teal-200" },
-    { n: "David Osei", role: "Design & Technology", exp: "12 yrs", qual: "M.Des RCA", init: "DO", grad: "from-violet-200 to-fuchsia-200" },
+    { n: "Sir Shahabuddin", role: "Head of Mathematics", exp: "18 yrs", qual: "M.Sc, Karachi University", init: "SS", grad: "from-amber-200 to-rose-200" },
+    { n: "Miss Kiran Ahmed", role: "Head of Humanities", exp: "16 yrs", qual: "M.A Karachi University", init: "KA", grad: "from-sky-200 to-indigo-200" },
+    { n: "Miss Asna Siddiqui", role: "Physics Lead", exp: "14 yrs", qual: "M.Sc, Karachi University", init: "AS", grad: "from-emerald-200 to-teal-200" },
+    { n: "Sir M. Asaad", role: "Design & Technology", exp: "12 yrs", qual: "M.Des, Indus Valley", init: "MA", grad: "from-violet-200 to-fuchsia-200" },
   ];
   return (
     <Section eyebrow="Faculty" title="Teachers who inspire, mentor and stay.">
