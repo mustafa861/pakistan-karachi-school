@@ -5,7 +5,7 @@ import {
   FlaskConical, Heart, Landmark, Library, Mic, Music, Palette, PlayCircle,
   ShieldCheck, Sparkles, Star, Trophy, Utensils, Wifi, GraduationCap,
   ChevronDown, Quote, Calendar, Newspaper, Search, Download, MapPin,
-  CheckCircle2, Clock, FileText, Mail,
+  CheckCircle2, Clock, FileText, Mail, Phone,
 } from "lucide-react";
 
 import heroImg from "../assets/hero-campus.jpg";
