@@ -7,6 +7,9 @@ import {
   ChevronDown, Quote, Calendar, Newspaper, Search, Download, MapPin,
   CheckCircle2, Clock, FileText, Mail, Phone,
 } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+
+import { Carousel, CarouselContent, CarouselItem } from "../components/ui/carousel";
 
 import heroImg from "../assets/hero-campus.jpg";
 import principalImg from "../assets/principal.jpg";
@@ -83,17 +86,48 @@ function Typewriter({ text, speed = 40 }: { text: string; speed?: number }) {
 }
 
 /* ============================ HERO ============================ */
+const heroSlides = [
+  { src: heroImg, alt: "PAKISTAN KARACHI SCHOOL PKS campus at golden hour" },
+  { src: facLib, alt: "PAKISTAN KARACHI SCHOOL Library" },
+  { src: facLab, alt: "Science Laboratory at PKS" },
+  { src: facAud, alt: "Grand Auditorium at PKS" },
+  { src: galSports, alt: "Sports Day at PKS" },
+  { src: galArt, alt: "Art class at PKS" },
+];
+
 function Hero() {
+  const [api, setApi] = useState<ReturnType<typeof useEmblaCarousel>[1] | null>(null);
+
+  useEffect(() => {
+    if (!api) return;
+    const autoplay = api.plugins()?.autoplay;
+    if (!autoplay) return;
+    api.on("select", () => autoplay.reset());
+  }, [api]);
+
   return (
     <section className="relative isolate overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <img
-          src={heroImg}
-          alt="PAKISTAN KARACHI SCHOOL PKS campus at golden hour"
-          className="h-full w-full object-cover"
-          width={1920}
-          height={1200}
-        />
+        <Carousel
+          opts={{ loop: true, align: "start" }}
+          plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
+          setApi={setApi}
+          className="h-full w-full"
+        >
+          <CarouselContent className="h-full w-full">
+            {heroSlides.map((slide, i) => (
+              <CarouselItem key={i} className="h-full w-full pl-0">
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  className="h-full w-full object-cover"
+                  width={1920}
+                  height={1200}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/50 to-ink/85" />
         <div className="absolute inset-0 gradient-hero opacity-40 mix-blend-overlay" />
       </div>
@@ -144,12 +178,25 @@ function Hero() {
           ))}
         </div>
 
-        <a
-          href="#about"
-          className="mt-14 inline-flex items-center gap-2 self-center text-xs uppercase tracking-[0.3em] text-cream/60"
-        >
-          Scroll <ChevronDown className="h-3.5 w-3.5 animate-float-slow" />
-        </a>
+        <div className="mt-12 flex flex-col items-center gap-6">
+          <div className="flex items-center gap-2">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => api?.scrollTo(i)}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  api?.selectedScrollSnap() === i ? "w-6 bg-gold" : "w-1.5 bg-cream/40 hover:bg-cream/60"
+                }`}
+              />
+            ))}
+          </div>
+          <a
+            href="#about"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-cream/60"
+          >
+            Scroll <ChevronDown className="h-3.5 w-3.5 animate-float-slow" />
+          </a>
+        </div>
       </div>
     </section>
   );
