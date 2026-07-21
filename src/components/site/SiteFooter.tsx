@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import { GraduationCap, Facebook, Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 export function SiteFooter() {
@@ -48,10 +47,10 @@ export function SiteFooter() {
           <FooterCol
             title="Admissions"
             items={[
-              ["Apply now", "/admissions"],
-              ["Process", "/admissions#process"],
-              ["Fee structure", "/admissions#fees"],
-              ["Prospectus", "/admissions#downloads"],
+              ["Apply now", "/#admissions"],
+              ["Process", "/#admissions"],
+              ["Fee structure", "/#admissions"],
+              ["Prospectus", "/#admissions"],
               ["FAQs", "/#faqs"],
             ]}
           />
@@ -84,9 +83,9 @@ export function SiteFooter() {
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-cream/50 sm:flex-row">
           <span>© {new Date().getFullYear()} PAKISTAN KARACHI SCHOOL PKS. All rights reserved.</span>
           <div className="flex gap-6">
-            <Link to="/" className="hover:text-cream">Privacy</Link>
-            <Link to="/" className="hover:text-cream">Terms</Link>
-            <Link to="/contact" className="hover:text-cream">Contact</Link>
+            <a href="/" className="hover:text-cream">Privacy</a>
+            <a href="/" className="hover:text-cream">Terms</a>
+            <a href="/#contact" className="hover:text-cream">Contact</a>
           </div>
         </div>
       </div>

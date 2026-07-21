@@ -5,6 +5,7 @@ import {
   FlaskConical, Heart, Landmark, Library, Mic, Music, Palette, PlayCircle,
   ShieldCheck, Sparkles, Star, Trophy, Utensils, Wifi, GraduationCap,
   ChevronDown, Quote, Calendar, Newspaper, Search, Download, MapPin,
+  CheckCircle2, Clock, FileText, Mail,
 } from "lucide-react";
 
 import heroImg from "../assets/hero-campus.jpg";
@@ -47,6 +48,8 @@ function Home() {
       <News />
       <FAQs />
       <CtaBanner />
+      <AdmissionsSection />
+      <ContactSection />
     </>
   );
 }
@@ -109,7 +112,8 @@ function Hero() {
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <Link
-              to="/admissions"
+              to="/"
+              hash="admissions"
               className="group inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-medium text-ink transition-all hover:bg-gold-soft"
             >
               Begin admission
@@ -225,7 +229,7 @@ export function About() {
 /* ============================ PRINCIPAL ============================ */
 export function Principal() {
   return (
-    <section className="relative overflow-hidden bg-ink py-28 text-cream">
+    <section id="principal" className="relative overflow-hidden bg-ink py-28 text-cream">
       <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-gold/20 blur-3xl" />
       <div className="container-page relative grid gap-14 lg:grid-cols-12">
         <div className="lg:col-span-5">
@@ -348,7 +352,7 @@ export function Classes() {
     { g: "Grade XII", age: "17+", curr: "College Prep", subs: ["Advanced Electives"], acts: ["Capstone", "Mentoring"] },
   ];
   return (
-    <Section eyebrow="Classes" title="Every grade, thoughtfully designed.">
+    <Section id="classes" eyebrow="Classes" title="Every grade, thoughtfully designed.">
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {items.map((c) => (
           <div key={c.g} className="group relative overflow-hidden rounded-3xl border border-border bg-card p-6 card-hover sm:p-8">
@@ -386,7 +390,7 @@ export function Teachers() {
     { n: "Sir M. Asaad", role: "Design & Technology", exp: "12 yrs", qual: "M.Des, Indus Valley", init: "MA", grad: "from-violet-200 to-fuchsia-200" },
   ];
   return (
-    <Section eyebrow="Faculty" title="Teachers who inspire, mentor and stay.">
+    <Section id="teachers" eyebrow="Faculty" title="Teachers who inspire, mentor and stay.">
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {t.map((p) => (
           <div key={p.n} className="group rounded-3xl border border-border bg-card p-6 card-hover">
@@ -615,7 +619,7 @@ export function Achievements() {
     { i: GraduationCap, k: "Scholarships", v: "PKR 4.2M in university aid last year" },
   ];
   return (
-    <Section eyebrow="Achievements" title="Excellence, quietly earned.">
+    <Section id="achievements" eyebrow="Achievements" title="Excellence, quietly earned.">
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {items.map(({ i: Icon, k, v }) => (
           <div key={k} className="rounded-3xl border border-border bg-gradient-to-br from-cream to-background p-6 card-hover sm:p-8">
@@ -664,7 +668,7 @@ export function News() {
     { c: "Exam", t: "Mid-term schedule published for Grades VI–X", d: "2 weeks ago" },
   ];
   return (
-    <Section eyebrow="News & Announcements" title="Fresh from the office.">
+    <Section id="news" eyebrow="News & Announcements" title="Fresh from the office.">
       <div className="grid gap-6 md:grid-cols-3">
         {posts.map((p) => (
           <a
@@ -734,10 +738,10 @@ export function CtaBanner() {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-              <Link to="/admissions" className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-sm font-medium text-ink transition-colors hover:bg-gold-soft">
+              <Link to="/" hash="admissions" className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-sm font-medium text-ink transition-colors hover:bg-gold-soft">
                 Start application <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="#downloads" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-4 text-sm font-medium text-cream hover:bg-white/10">
+              <a href="#admissions" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-4 text-sm font-medium text-cream hover:bg-white/10">
                 <Download className="h-4 w-4" /> Prospectus
               </a>
             </div>
@@ -745,6 +749,258 @@ export function CtaBanner() {
         </div>
       </div>
     </section>
+  );
+}
+
+/* ============================ ADMISSIONS ============================ */
+function AdmissionsSection() {
+  const [sent, setSent] = useState(false);
+  const steps = [
+    { n: "01", t: "Enquiry", d: "Submit an online enquiry or visit campus." },
+    { n: "02", t: "Interaction", d: "Grade-appropriate entrance assessment or observation." },
+    { n: "03", t: "Parent Meeting", d: "A warm conversation with school leadership." },
+    { n: "04", t: "Offer & Fees", d: "Seat confirmation and fee schedule." },
+    { n: "05", t: "Onboarding", d: "Orientation and welcome kit before session start." },
+  ];
+  return (
+    <>
+      <section id="admissions" className="container-page py-24">
+        <div className="mb-14 max-w-2xl">
+          <div className="text-xs uppercase tracking-[0.28em] text-gold">Process</div>
+          <h2 className="mt-4 font-display text-3xl sm:text-5xl">Five thoughtful steps.</h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-5">
+          {steps.map((s) => (
+            <div key={s.n} className="rounded-3xl border border-border bg-card p-6 card-hover">
+              <div className="text-xs uppercase tracking-[0.22em] text-gold">{s.n}</div>
+              <div className="mt-3 font-display text-xl">{s.t}</div>
+              <div className="mt-2 text-sm text-muted-foreground">{s.d}</div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-20 grid gap-8 lg:grid-cols-2">
+          <div className="rounded-3xl border border-border bg-card p-8">
+            <div className="text-xs uppercase tracking-[0.22em] text-gold">Eligibility</div>
+            <ul className="mt-4 space-y-3">
+              {["Play Group: Age 2 as of 31 March", "Nursery: Age 3 as of 31 March", "KG: Age 4 as of 31 March", "Grades I–XII: Prior schooling & age-appropriate assessment"].map((e) => (
+                <li key={e} className="flex items-start gap-3 text-sm text-foreground/80">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> {e}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-3xl border border-border bg-card p-8">
+            <div className="text-xs uppercase tracking-[0.22em] text-gold">Required Documents</div>
+            <ul className="mt-4 space-y-3">
+              {["Birth certificate", "Last report card", "Passport-size photos", "Address proof", "Transfer certificate (if applicable)"].map((e) => (
+                <li key={e} className="flex items-start gap-3 text-sm text-foreground/80">
+                  <FileText className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> {e}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-cream py-24">
+        <div className="container-page grid gap-10 lg:grid-cols-2">
+          <div>
+            <div className="text-xs uppercase tracking-[0.28em] text-gold">Fee Structure</div>
+            <h2 className="mt-4 font-display text-3xl sm:text-5xl">Transparent, all-inclusive.</h2>
+            <div className="mt-8 divide-y divide-border rounded-3xl border border-border bg-card">
+              {[["Play Group – KG", "PKR 96,000 / yr"], ["Primary (I–V)", "PKR 138,000 / yr"], ["Middle (VI–VIII)", "PKR 162,000 / yr"], ["Secondary (IX–X)", "PKR 186,000 / yr"], ["Higher Sec (XI–XII)", "PKR 213,000 / yr"]].map(([k, v]) => (
+                <div key={k} className="flex items-center justify-between px-6 py-4">
+                  <span className="text-sm text-foreground/80">{k}</span>
+                  <span className="font-display text-xl">{v}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 text-xs text-muted-foreground">Includes tuition, learning materials, labs and library. Transport & meals optional.</p>
+          </div>
+          <div>
+            <div className="text-xs uppercase tracking-[0.28em] text-gold">Timeline</div>
+            <h2 className="mt-4 font-display text-3xl sm:text-5xl">Key dates.</h2>
+            <ol className="mt-8 space-y-4">
+              {[["Nov 1", "Round-1 opens"], ["Feb 10", "Round-2 closes"], ["Mar 15", "Offer letters"], ["Apr 5", "Fees due"], ["Jun 15", "Session begins"]].map(([d, l], i) => (
+                <li key={d} className="flex gap-4 rounded-3xl border border-border bg-card p-5">
+                  <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-ink text-cream text-xs font-medium">{String(i + 1).padStart(2, "0")}</div>
+                  <div>
+                    <div className="text-xs uppercase tracking-[0.22em] text-gold">{d}</div>
+                    <div className="mt-1 font-display text-xl">{l}</div>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-page py-24">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <div className="text-xs uppercase tracking-[0.28em] text-gold">Downloads</div>
+            <h2 className="mt-4 font-display text-3xl sm:text-5xl">Everything, in one place.</h2>
+          </div>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {[["Prospectus 2026", "PDF · 4.2 MB"], ["Fee Structure", "PDF · 320 KB"], ["School Calendar", "PDF · 180 KB"], ["Uniform Guide", "PDF · 220 KB"]].map(([t, s]) => (
+            <a key={t} href="#" className="group flex items-center justify-between rounded-3xl border border-border bg-card p-6 card-hover">
+              <div>
+                <div className="font-display text-xl">{t}</div>
+                <div className="mt-1 text-xs text-muted-foreground">{s}</div>
+              </div>
+              <span className="grid h-11 w-11 place-items-center rounded-full bg-ink text-cream transition-transform group-hover:scale-110">
+                <Download className="h-4 w-4" />
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-page pb-24">
+        <div className="rounded-4xl bg-ink p-10 text-cream shadow-elegant md:p-16">
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div>
+              <div className="text-xs uppercase tracking-[0.22em] text-gold-soft">Apply now</div>
+              <h2 className="mt-4 font-display text-3xl leading-tight sm:text-5xl">Start your application.</h2>
+              <p className="mt-4 max-w-md text-cream/70">Share a few details and our admissions team will reach out within 24 hours.</p>
+              <div className="mt-8 flex items-center gap-3 text-sm text-cream/70">
+                <GraduationCap className="h-4 w-4 text-gold" /> Priority replies for Round-1 applicants.
+              </div>
+            </div>
+            <form
+              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              className="grid gap-3"
+            >
+              {sent ? (
+                <div className="grid place-items-center rounded-3xl border border-gold/30 bg-white/5 p-10 text-center">
+                  <CheckCircle2 className="h-8 w-8 text-gold" />
+                  <div className="mt-4 font-display text-2xl">Thank you</div>
+                  <p className="mt-2 text-sm text-cream/70">We've received your enquiry. Our team will be in touch shortly.</p>
+                </div>
+              ) : (
+                <>
+                  <AdmissionField label="Parent's name" name="name" />
+                  <AdmissionField label="Email" name="email" type="email" />
+                  <AdmissionField label="Phone" name="phone" type="tel" />
+                  <AdmissionField label="Applying for grade" name="grade" placeholder="e.g. Grade V" />
+                  <button className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-gold-soft">
+                    Submit enquiry
+                  </button>
+                </>
+              )}
+            </form>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function AdmissionField({ label, name, type = "text", placeholder }: { label: string; name: string; type?: string; placeholder?: string }) {
+  return (
+    <label className="flex flex-col gap-1.5">
+      <span className="text-xs uppercase tracking-[0.22em] text-cream/60">{label}</span>
+      <input
+        required
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        maxLength={120}
+        className="rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-cream placeholder:text-cream/30 focus:border-gold focus:outline-none"
+      />
+    </label>
+  );
+}
+
+/* ============================ CONTACT ============================ */
+function ContactSection() {
+  const [sent, setSent] = useState(false);
+  const info = [
+    { icon: MapPin, title: "Visit us", lines: ["123 University Road", "Karachi, Pakistan"] },
+    { icon: Phone, title: "Call us", lines: ["+92 345678932", "Admissions: +92 345678932"] },
+    { icon: Mail, title: "Email", lines: ["PKS@gmail.com", "PKS@gmail.com"] },
+    { icon: Clock, title: "Office hours", lines: ["Mon – Fri · 8:00 AM – 4:30 PM", "Sat · 9:00 AM – 1:00 PM"] },
+  ];
+  return (
+    <section id="contact">
+      <section className="relative overflow-hidden gradient-hero py-24 text-cream">
+        <div className="container-page">
+          <div className="text-xs uppercase tracking-[0.28em] text-gold-soft">Contact</div>
+          <h1 className="mt-4 max-w-3xl font-display text-5xl leading-[1.05] sm:text-7xl">We'd love to hear <em className="text-gradient-gold">from you</em>.</h1>
+          <p className="mt-6 max-w-xl text-cream/70">
+            Questions, admissions, campus visits or media enquiries — write to us and we'll respond within one business day.
+          </p>
+        </div>
+      </section>
+
+      <section className="container-page grid gap-10 py-24 lg:grid-cols-12">
+        <div className="lg:col-span-5 space-y-4">
+          {info.map(({ icon: Icon, title, lines }) => (
+            <div key={title} className="flex gap-5 rounded-3xl border border-border bg-card p-6">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-ink text-gold-soft">
+                <Icon className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-[0.22em] text-gold">{title}</div>
+                {lines.map((l) => <div key={l} className="mt-1 text-sm text-foreground/80">{l}</div>)}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="lg:col-span-7">
+          <div className="rounded-4xl border border-border bg-card p-8 shadow-elegant md:p-10">
+            {sent ? (
+              <div className="grid place-items-center py-16 text-center">
+                <CheckCircle2 className="h-10 w-10 text-gold" />
+                <div className="mt-4 font-display text-3xl">Message received</div>
+                <p className="mt-2 max-w-sm text-sm text-muted-foreground">Thank you for reaching out. We'll get back to you shortly.</p>
+              </div>
+            ) : (
+              <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="grid gap-4">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <ContactField label="Your name" name="name" />
+                  <ContactField label="Email" name="email" type="email" />
+                </div>
+                <ContactField label="Subject" name="subject" />
+                <label className="flex flex-col gap-1.5">
+                  <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Message</span>
+                  <textarea
+                    required maxLength={1000} rows={5} name="message"
+                    className="rounded-2xl border border-input bg-background px-4 py-3 text-sm focus:border-gold focus:outline-none"
+                  />
+                </label>
+                <button className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-cream transition-colors hover:bg-primary">
+                  Send message
+                </button>
+              </form>
+            )}
+          </div>
+
+          <div className="mt-6 overflow-hidden rounded-4xl border border-border">
+            <iframe
+              title="Map"
+              className="h-80 w-full"
+              loading="lazy"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-122.421%2C37.769%2C-122.401%2C37.789&layer=mapnik"
+            />
+          </div>
+        </div>
+      </section>
+    </section>
+  );
+}
+
+function ContactField({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
+  return (
+    <label className="flex flex-col gap-1.5">
+      <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">{label}</span>
+      <input
+        required maxLength={200} type={type} name={name}
+        className="rounded-2xl border border-input bg-background px-4 py-3 text-sm focus:border-gold focus:outline-none"
+      />
+    </label>
   );
 }
 
