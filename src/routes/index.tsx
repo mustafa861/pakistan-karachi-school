@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-function Home() {
+export function Home() {
   return (
     <>
       <Hero />
