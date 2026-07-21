@@ -59,9 +59,9 @@ export function SiteFooter() {
           <div>
             <div className="text-xs uppercase tracking-[0.22em] text-cream/50">Visit us</div>
             <ul className="mt-5 space-y-4 text-sm text-cream/70">
-              <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> 42 Aurora Avenue, Meadowbrook, 560032</li>
-              <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> +1 (415) 555-0198</li>
-              <li className="flex gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> hello@aurelia.school</li>
+              <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> 123 University Road, Karachi, Pakistan</li>
+              <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> +92 345678932</li>
+              <li className="flex gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> PKS@gmail.com</li>
             </ul>
 
             <form

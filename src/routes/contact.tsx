@@ -31,8 +31,8 @@ function ContactPage() {
       <section className="container-page grid gap-10 py-24 lg:grid-cols-12">
         <div className="lg:col-span-5 space-y-4">
           <InfoCard icon={MapPin} title="Visit us" lines={["42 Aurora Avenue", "Meadowbrook, 560032"]} />
-          <InfoCard icon={Phone} title="Call us" lines={["+1 (415) 555-0198", "Admissions: +1 (415) 555-0142"]} />
-          <InfoCard icon={Mail} title="Email" lines={["hello@aurelia.school", "admissions@aurelia.school"]} />
+          <InfoCard icon={Phone} title="Call us" lines={["+92 345678932", "Admissions: +92 345678932"]} />
+          <InfoCard icon={Mail} title="Email" lines={["PKS@gmail.com", "PKS@gmail.com"]} />
           <InfoCard icon={Clock} title="Office hours" lines={["Mon – Fri · 8:00 AM – 4:30 PM", "Sat · 9:00 AM – 1:00 PM"]} />
         </div>
 
