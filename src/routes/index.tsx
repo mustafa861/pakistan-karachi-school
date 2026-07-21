@@ -586,7 +586,7 @@ export function Achievements() {
     { i: Trophy, k: "Board Toppers", v: "12 students ≥ 95% (2025)" },
     { i: Award, k: "Olympiads", v: "42 medals across STEM & languages" },
     { i: Star, k: "Sports", v: "State champions · Football & Chess" },
-    { i: GraduationCap, k: "Scholarships", v: "$4.2M in university aid last year" },
+    { i: GraduationCap, k: "Scholarships", v: "PKR 4.2M in university aid last year" },
   ];
   return (
     <Section eyebrow="Achievements" title="Excellence, quietly earned.">

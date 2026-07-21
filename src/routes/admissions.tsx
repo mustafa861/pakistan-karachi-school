@@ -102,11 +102,11 @@ function Process() {
 
 function FeesAndTimeline() {
   const fees = [
-    ["Play Group – KG", "$3,200 / yr"],
-    ["Primary (I–V)", "$4,600 / yr"],
-    ["Middle (VI–VIII)", "$5,400 / yr"],
-    ["Secondary (IX–X)", "$6,200 / yr"],
-    ["Higher Sec (XI–XII)", "$7,100 / yr"],
+    ["Play Group – KG", "PKR 96,000 / yr"],
+    ["Primary (I–V)", "PKR 138,000 / yr"],
+    ["Middle (VI–VIII)", "PKR 162,000 / yr"],
+    ["Secondary (IX–X)", "PKR 186,000 / yr"],
+    ["Higher Sec (XI–XII)", "PKR 213,000 / yr"],
   ];
   const timeline = [
     ["Nov 1", "Round-1 opens"],
