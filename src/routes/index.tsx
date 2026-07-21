@@ -12,7 +12,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem } from "../components/ui/carousel";
 
 import heroImg from "../assets/hero-campus.jpg";
-import principalImg from "../assets/principal.jpg";
+import principalImg from "../assets/principal.png";
 import facLib from "../assets/facility-library.jpg";
 import facLab from "../assets/facility-lab.jpg";
 import facAud from "../assets/facility-auditorium.jpg";
